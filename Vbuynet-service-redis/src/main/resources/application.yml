@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: Vbutnet-service-redis
+  redis:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    sentinel:
+      master: mymaster
+      nodes: 192.168.75.140:26379
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.10.151:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: 192.168.10.151:8080
+
+server:
+  port: 9503
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
