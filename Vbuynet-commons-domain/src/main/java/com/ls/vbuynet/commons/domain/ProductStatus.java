@@ -1,17 +1,16 @@
 package com.ls.vbuynet.commons.domain;
 
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
-@Table(name = "sl..product_status")
-public class ProductStatus {
+@Table(name = "product_status")
+public class ProductStatus  extends BaseDomain implements Serializable {
     /**
      * 商品状态Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
     /**
      * 商品状态（1,上架2，下架）
@@ -36,23 +35,6 @@ public class ProductStatus {
     @Column(name = "productId")
     private Integer productid;
 
-    /**
-     * 获取商品状态Id
-     *
-     * @return Id - 商品状态Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置商品状态Id
-     *
-     * @param id 商品状态Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取商品状态（1,上架2，下架）

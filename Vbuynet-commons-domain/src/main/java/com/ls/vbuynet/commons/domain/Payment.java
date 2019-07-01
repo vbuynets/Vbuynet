@@ -1,17 +1,17 @@
 package com.ls.vbuynet.commons.domain;
 
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-@Table(name = "sl..payment")
-public class Payment {
+@Table(name = "payment")
+public class Payment  extends BaseDomain implements Serializable {
     /**
      * 支付表Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 订单Id
@@ -41,24 +41,6 @@ public class Payment {
      * 支付金额
      */
     private BigDecimal money;
-
-    /**
-     * 获取支付表Id
-     *
-     * @return Id - 支付表Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置支付表Id
-     *
-     * @param id 支付表Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取订单Id

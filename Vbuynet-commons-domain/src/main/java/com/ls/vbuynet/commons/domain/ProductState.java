@@ -1,16 +1,15 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..product_state")
-public class ProductState {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "product_state")
+public class ProductState  extends BaseDomain implements Serializable {
     /**
      * 评论状态Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
     /**
      * 评论总数
@@ -32,23 +31,6 @@ public class ProductState {
      */
     private Integer poor;
 
-    /**
-     * 获取评论状态Id
-     *
-     * @return Id - 评论状态Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置评论状态Id
-     *
-     * @param id 评论状态Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取评论总数

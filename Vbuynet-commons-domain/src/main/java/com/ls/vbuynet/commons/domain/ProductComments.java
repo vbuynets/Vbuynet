@@ -1,17 +1,17 @@
 package com.ls.vbuynet.commons.domain;
 
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
-@Table(name = "sl..product_comments")
-public class ProductComments {
+@Table(name = "product_comments")
+public class ProductComments  extends BaseDomain implements Serializable {
     /**
      * 评论id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 商品Id
@@ -43,23 +43,7 @@ public class ProductComments {
     @Column(name = "PSId")
     private Integer psid;
 
-    /**
-     * 获取评论id
-     *
-     * @return Id - 评论id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * 设置评论id
-     *
-     * @param id 评论id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取商品Id

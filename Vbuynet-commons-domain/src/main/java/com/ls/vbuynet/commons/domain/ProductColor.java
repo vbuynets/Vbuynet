@@ -1,39 +1,21 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..product_color")
-public class ProductColor {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "product_color")
+public class ProductColor  extends BaseDomain implements Serializable {
     /**
      * 颜色Id
      */
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
     /**
      * 比如: 黑色 白色 绿色
      */
     @Column(name = "colorName")
     private String colorname;
-
-    /**
-     * 获取颜色Id
-     *
-     * @return id - 颜色Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置颜色Id
-     *
-     * @param id 颜色Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取比如: 黑色 白色 绿色

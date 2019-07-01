@@ -1,17 +1,17 @@
 package com.ls.vbuynet.commons.domain;
 
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-@Table(name = "sl..capital")
-public class Capital {
+@Table(name = "capital")
+public class Capital extends BaseDomain implements Serializable {
     /**
      * 资金表
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 用户资金
@@ -29,23 +29,6 @@ public class Capital {
      */
     private String desc;
 
-    /**
-     * 获取资金表
-     *
-     * @return Id - 资金表
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置资金表
-     *
-     * @param id 资金表
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取用户资金

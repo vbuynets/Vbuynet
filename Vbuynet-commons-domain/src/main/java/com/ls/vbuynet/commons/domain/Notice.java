@@ -1,16 +1,16 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..notice")
-public class Notice {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "notice")
+public class Notice  extends BaseDomain implements Serializable {
     /**
      * 公告Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 标题
@@ -22,23 +22,6 @@ public class Notice {
      */
     private String desc;
 
-    /**
-     * 获取公告Id
-     *
-     * @return Id - 公告Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置公告Id
-     *
-     * @param id 公告Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取标题

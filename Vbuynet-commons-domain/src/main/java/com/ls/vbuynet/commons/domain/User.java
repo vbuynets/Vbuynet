@@ -1,17 +1,16 @@
 package com.ls.vbuynet.commons.domain;
 
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
-@Table(name = "sl..user")
-public class User {
+@Table(name = "user")
+public class User  extends BaseDomain implements Serializable {
     /**
      * 用户id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
     /**
      * 用户姓名
@@ -55,15 +54,7 @@ public class User {
      */
     private String level;
 
-    /**
-     * 创建时间
-     */
-    private Date created;
 
-    /**
-     * 更新时间
-     */
-    private Date updated;
 
     /**
      * 默认收货Id
@@ -71,23 +62,6 @@ public class User {
     @Column(name = "siteId")
     private Integer siteid;
 
-    /**
-     * 获取用户id
-     *
-     * @return Id - 用户id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置用户id
-     *
-     * @param id 用户id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取用户姓名
@@ -233,41 +207,6 @@ public class User {
         this.level = level;
     }
 
-    /**
-     * 获取创建时间
-     *
-     * @return created - 创建时间
-     */
-    public Date getCreated() {
-        return created;
-    }
-
-    /**
-     * 设置创建时间
-     *
-     * @param created 创建时间
-     */
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    /**
-     * 获取更新时间
-     *
-     * @return updated - 更新时间
-     */
-    public Date getUpdated() {
-        return updated;
-    }
-
-    /**
-     * 设置更新时间
-     *
-     * @param updated 更新时间
-     */
-    public void setUpdated(Date updated) {
-        this.updated = updated;
-    }
 
     /**
      * 获取默认收货Id

@@ -1,16 +1,16 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..county")
-public class County {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "county")
+public class County  extends BaseDomain implements Serializable {
     /**
      * 区县Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 当前省，市，县名称
@@ -23,23 +23,6 @@ public class County {
     @Column(name = "parentId")
     private Integer parentid;
 
-    /**
-     * 获取区县Id
-     *
-     * @return Id - 区县Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置区县Id
-     *
-     * @param id 区县Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取当前省，市，县名称

@@ -1,17 +1,17 @@
 package com.ls.vbuynet.commons.domain;
 
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
-@Table(name = "sl..cart")
-public class Cart {
+@Table(name = "cart")
+public class Cart  extends BaseDomain implements Serializable {
     /**
      * 购物车Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 商品Id
@@ -35,23 +35,6 @@ public class Cart {
      */
     private Date jointime;
 
-    /**
-     * 获取购物车Id
-     *
-     * @return Id - 购物车Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置购物车Id
-     *
-     * @param id 购物车Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取商品Id

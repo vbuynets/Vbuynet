@@ -1,16 +1,16 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..order_status")
-public class OrderStatus {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "order_status")
+public class OrderStatus  extends BaseDomain implements Serializable {
     /**
      * 订单状态表Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 订单状态示例
@@ -18,23 +18,7 @@ public class OrderStatus {
     @Column(name = "statusName")
     private String statusname;
 
-    /**
-     * 获取订单状态表Id
-     *
-     * @return Id - 订单状态表Id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * 设置订单状态表Id
-     *
-     * @param id 订单状态表Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取订单状态示例

@@ -1,19 +1,17 @@
 package com.ls.vbuynet.commons.domain;
 
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Table(name = "sl..order")
-public class Order {
+@Table(name = "order")
+public class Order  extends BaseDomain implements Serializable {
     /**
      * 订单Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
     /**
      * 用户Id
      */
@@ -75,23 +73,7 @@ public class Order {
     @Column(name = "userName")
     private byte[] username;
 
-    /**
-     * 获取订单Id
-     *
-     * @return Id - 订单Id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * 设置订单Id
-     *
-     * @param id 订单Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取用户Id

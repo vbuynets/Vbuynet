@@ -1,17 +1,15 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..product_picture")
-public class ProductPicture {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "product_picture")
+public class ProductPicture  extends BaseDomain implements Serializable {
     /**
      * 图片id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
     /**
      * 图片路径
      */
@@ -26,24 +24,6 @@ public class ProductPicture {
 
     @Column(name = "about_picture_id")
     private Integer aboutPictureId;
-
-    /**
-     * 获取图片id
-     *
-     * @return Id - 图片id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置图片id
-     *
-     * @param id 图片id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取图片路径

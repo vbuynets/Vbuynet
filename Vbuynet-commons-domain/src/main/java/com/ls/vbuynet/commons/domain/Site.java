@@ -1,16 +1,15 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..site")
-public class Site {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "site")
+public class Site  extends BaseDomain implements Serializable {
     /**
      * 地址Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
     /**
      * 用户Id
@@ -46,23 +45,6 @@ public class Site {
      */
     private Integer phone;
 
-    /**
-     * 获取地址Id
-     *
-     * @return Id - 地址Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置地址Id
-     *
-     * @param id 地址Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取用户Id

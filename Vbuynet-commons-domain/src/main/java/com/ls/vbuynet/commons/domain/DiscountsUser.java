@@ -1,16 +1,16 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..discounts_user")
-public class DiscountsUser {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "discounts_user")
+public class DiscountsUser  extends BaseDomain implements Serializable {
     /**
      * 用户优惠券Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 用户Id
@@ -29,23 +29,7 @@ public class DiscountsUser {
      */
     private String unkonwnstate;
 
-    /**
-     * 获取用户优惠券Id
-     *
-     * @return Id - 用户优惠券Id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * 设置用户优惠券Id
-     *
-     * @param id 用户优惠券Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取用户Id

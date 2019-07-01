@@ -1,16 +1,16 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..product_category")
-public class ProductCategory {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "product_category")
+public class ProductCategory  extends BaseDomain implements Serializable {
     /**
      * 分类Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 父级分类名称
@@ -29,23 +29,7 @@ public class ProductCategory {
      */
     private Integer type;
 
-    /**
-     * 获取分类Id
-     *
-     * @return Id - 分类Id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * 设置分类Id
-     *
-     * @param id 分类Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取父级分类名称

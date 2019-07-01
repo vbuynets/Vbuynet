@@ -1,29 +1,16 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..product_comments_state")
-public class ProductCommentsState {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "product_comments_state")
+public class ProductCommentsState  extends BaseDomain implements Serializable {
 
     @Column(name = "state_name")
     private String stateName;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return state_name

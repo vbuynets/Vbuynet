@@ -1,17 +1,16 @@
 package com.ls.vbuynet.commons.domain;
 
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
-@Table(name = "sl..signin")
-public class Signin {
+@Table(name = "signin")
+public class Signin  extends BaseDomain implements Serializable {
     /**
      * 签到Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
     /**
      * 用户Id
@@ -29,23 +28,6 @@ public class Signin {
      */
     private Integer continuous;
 
-    /**
-     * 获取签到Id
-     *
-     * @return Id - 签到Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置签到Id
-     *
-     * @param id 签到Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取用户Id

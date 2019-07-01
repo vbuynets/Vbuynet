@@ -1,40 +1,22 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..product_pdf")
-public class ProductPdf {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "product_pdf")
+public class ProductPdf  extends BaseDomain implements Serializable {
     /**
      * 专区Id
      */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+
 
     /**
      * 专区类型名称
      */
     @Column(name = "typeName")
     private String typename;
-
-    /**
-     * 获取专区Id
-     *
-     * @return Id - 专区Id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * 设置专区Id
-     *
-     * @param id 专区Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * 获取专区类型名称

@@ -1,18 +1,14 @@
 package com.ls.vbuynet.commons.domain;
 
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Table(name = "sl..discounts")
-public class Discounts {
-    /**
-     * 优惠券Id
-     */
-    @Id
-    @Column(name = "Id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+@Table(name = "discounts")
+public class Discounts  extends BaseDomain implements Serializable {
 
     @Column(name = "smileMoney")
     private Integer smilemoney;
@@ -41,23 +37,7 @@ public class Discounts {
      */
     private Date period;
 
-    /**
-     * 获取优惠券Id
-     *
-     * @return Id - 优惠券Id
-     */
-    public Integer getId() {
-        return id;
-    }
 
-    /**
-     * 设置优惠券Id
-     *
-     * @param id 优惠券Id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return smileMoney

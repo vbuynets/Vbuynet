@@ -1,9 +1,12 @@
 package com.ls.vbuynet.commons.domain;
 
-import javax.persistence.*;
+import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-@Table(name = "sl..logistitcs")
-public class Logistitcs {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Table(name = "logistitcs")
+public class Logistitcs  extends BaseDomain implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
