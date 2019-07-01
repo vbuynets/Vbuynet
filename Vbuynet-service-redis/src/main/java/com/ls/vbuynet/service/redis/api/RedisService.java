@@ -7,14 +7,14 @@ public interface RedisService {
      * @param value value
      * @param seconds 存放时间
      */
-     void set(String key,String value,Long seconds);
+     void set(String key,Object value,Long seconds);
 
     /**
      * 设置缓存时间
      * @param key key
      * @param value value
      */
-     void set(String key,String value);
+     void set(String key,Object value);
 
     /**
      * 根据key拿到缓存

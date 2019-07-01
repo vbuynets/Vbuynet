@@ -12,12 +12,12 @@ public class RedisServiceImpl implements RedisService {
     private RedisTemplate redisTemplate;
 
     @Override
-    public void set(String key, String value, Long seconds) {
+    public void set(String key, Object value, Long seconds) {
         redisTemplate.opsForValue().set(key,value,seconds);
     }
 
     @Override
-    public void set(String key, String value) {
+    public void set(String key, Object value) {
         redisTemplate.opsForValue().set(key,value);
     }
 
