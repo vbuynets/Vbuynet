@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ls.vbuynet.commons.mapper.SiteMapper">
+  <resultMap id="BaseResultMap" type="com.ls.vbuynet.commons.domain.Site">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="consigneeName" jdbcType="VARCHAR" property="consigneename" />
+    <result column="siteName" jdbcType="VARCHAR" property="sitename" />
+    <result column="consigneeSize" jdbcType="VARCHAR" property="consigneesize" />
+    <result column="cellphone" jdbcType="INTEGER" property="cellphone" />
+    <result column="phone" jdbcType="INTEGER" property="phone" />
+  </resultMap>
+</mapper>

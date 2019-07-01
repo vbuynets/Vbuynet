@@ -38,12 +38,10 @@
         </dependency>
         <!-- Commons End -->
 
-        <!-- Projects Begin -->
-        <!--<dependency>-->
-        <!--<groupId>com.funtl</groupId>-->
-        <!--<artifactId>myshop-commons-domain</artifactId>-->
-        <!--<version>${project.parent.version}</version>-->
-        <!--</dependency>-->
-        <!-- Projects End -->
+        <dependency>
+            <groupId>com.ls</groupId>
+            <artifactId>Vbuynet-commons-domain</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 </project>

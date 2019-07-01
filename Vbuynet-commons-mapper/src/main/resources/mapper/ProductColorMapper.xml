@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ls.vbuynet.commons.mapper.ProductColorMapper">
+  <resultMap id="BaseResultMap" type="com.ls.vbuynet.commons.domain.ProductColor">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="colorName" jdbcType="VARCHAR" property="colorname" />
+  </resultMap>
+</mapper>

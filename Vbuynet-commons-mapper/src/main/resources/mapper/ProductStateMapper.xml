@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ls.vbuynet.commons.mapper.ProductStateMapper">
+  <resultMap id="BaseResultMap" type="com.ls.vbuynet.commons.domain.ProductState">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="pquantity" jdbcType="INTEGER" property="pquantity" />
+    <result column="good" jdbcType="INTEGER" property="good" />
+    <result column="centre" jdbcType="INTEGER" property="centre" />
+    <result column="poor" jdbcType="INTEGER" property="poor" />
+  </resultMap>
+</mapper>

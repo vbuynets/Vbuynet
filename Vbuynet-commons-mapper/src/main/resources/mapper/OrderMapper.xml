@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ls.vbuynet.commons.mapper.OrderMapper">
+  <resultMap id="BaseResultMap" type="com.ls.vbuynet.commons.domain.Order">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="siteId" jdbcType="INTEGER" property="siteid" />
+    <result column="datetime" jdbcType="TIMESTAMP" property="datetime" />
+    <result column="transtaionId" jdbcType="INTEGER" property="transtaionid" />
+    <result column="discountsId" jdbcType="INTEGER" property="discountsid" />
+    <result column="discountsPrice" jdbcType="DECIMAL" property="discountsprice" />
+    <result column="alwasMoney" jdbcType="DECIMAL" property="alwasmoney" />
+    <result column="getIntegral" jdbcType="INTEGER" property="getintegral" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="order_code" jdbcType="VARCHAR" property="orderCode" />
+    <result column="userName" jdbcType="VARBINARY" property="username" />
+  </resultMap>
+</mapper>

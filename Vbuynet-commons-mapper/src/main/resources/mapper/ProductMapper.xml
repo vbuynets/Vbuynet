@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ls.vbuynet.commons.mapper.ProductMapper">
+  <resultMap id="BaseResultMap" type="com.ls.vbuynet.commons.domain.Product">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="product_code" jdbcType="VARCHAR" property="productCode" />
+    <result column="product_Name" jdbcType="VARCHAR" property="productName" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="stock" jdbcType="INTEGER" property="stock" />
+    <result column="cate1" jdbcType="INTEGER" property="cate1" />
+    <result column="cate2" jdbcType="INTEGER" property="cate2" />
+    <result column="cate3" jdbcType="INTEGER" property="cate3" />
+    <result column="size_id" jdbcType="INTEGER" property="sizeId" />
+    <result column="color_id" jdbcType="INTEGER" property="colorId" />
+    <result column="filePath" jdbcType="VARCHAR" property="filepath" />
+    <result column="pdfId" jdbcType="INTEGER" property="pdfid" />
+    <result column="disconutId" jdbcType="INTEGER" property="disconutid" />
+    <result column="need_integral" jdbcType="INTEGER" property="needIntegral" />
+    <result column="moods" jdbcType="INTEGER" property="moods" />
+    <result column="sales" jdbcType="INTEGER" property="sales" />
+    <result column="integral" jdbcType="INTEGER" property="integral" />
+    <result column="product_describe" jdbcType="VARCHAR" property="productDescribe" />
+  </resultMap>
+</mapper>
