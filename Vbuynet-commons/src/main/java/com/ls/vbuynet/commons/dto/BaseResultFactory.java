@@ -8,9 +8,9 @@ import java.util.List;
  * <p>Title: BaseResultFactory</p>
  * <p>Description: </p>
  *
- * @author Lusifer
+ * @author liang
  * @version 1.0.0
- * @date 2019/1/23 15:16
+ * @date 2019/7/01 15:50
  */
 @SuppressWarnings("all")
 public class BaseResultFactory<T extends AbstractBaseDomain> {

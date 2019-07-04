@@ -1,15 +1,11 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Table(name = "logistitcs")
-public class Logistitcs  extends BaseDomain implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class Logistitcs  extends AbstractBaseDomain {
 
     @Column(name = "logistitcs_code")
     private String logistitcsCode;
@@ -19,20 +15,6 @@ public class Logistitcs  extends BaseDomain implements Serializable {
 
     @Column(name = "order_status_id")
     private Integer orderStatusId;
-
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     /**
      * @return logistitcs_code

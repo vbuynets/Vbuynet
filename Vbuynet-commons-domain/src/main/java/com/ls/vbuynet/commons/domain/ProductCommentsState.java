@@ -1,12 +1,12 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Table(name = "product_comments_state")
-public class ProductCommentsState  extends BaseDomain implements Serializable {
+public class ProductCommentsState  extends AbstractBaseDomain {
 
     @Column(name = "state_name")
     private String stateName;

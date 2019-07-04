@@ -1,16 +1,13 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "user")
-public class User  extends BaseDomain implements Serializable {
-    /**
-     * 用户id
-     */
+public class User  extends AbstractBaseDomain {
 
     /**
      * 用户姓名

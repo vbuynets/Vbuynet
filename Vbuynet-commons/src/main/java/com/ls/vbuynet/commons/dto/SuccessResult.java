@@ -12,9 +12,9 @@ import java.util.List;
  * <p>Title: SuccessResult</p>
  * <p>Description: </p>
  *
- * @author Lusifer
+ * @author liang
  * @version 1.0.0
- * @date 2019/1/23 15:07
+ * @date 2019/7/01 15:50
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

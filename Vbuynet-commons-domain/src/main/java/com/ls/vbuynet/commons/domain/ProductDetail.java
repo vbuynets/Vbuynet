@@ -1,12 +1,13 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Table(name = "product_detail")
-public class ProductDetail  extends BaseDomain implements Serializable {
+public class ProductDetail extends AbstractBaseDomain {
     /**
      * 商品详情表
      */

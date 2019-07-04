@@ -1,17 +1,11 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Table(name = "notice")
-public class Notice  extends BaseDomain implements Serializable {
-    /**
-     * 公告Id
-     */
-
-
+public class Notice extends AbstractBaseDomain{
     /**
      * 标题
      */
@@ -58,4 +52,5 @@ public class Notice  extends BaseDomain implements Serializable {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
 }

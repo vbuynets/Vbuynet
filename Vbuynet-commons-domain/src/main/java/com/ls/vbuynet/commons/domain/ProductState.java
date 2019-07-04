@@ -1,15 +1,13 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Table(name = "product_state")
-public class ProductState  extends BaseDomain implements Serializable {
-    /**
-     * 评论状态Id
-     */
+public class ProductState extends AbstractBaseDomain {
 
     /**
      * 评论总数

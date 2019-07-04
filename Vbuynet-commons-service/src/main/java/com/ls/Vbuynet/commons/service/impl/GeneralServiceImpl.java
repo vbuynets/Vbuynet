@@ -3,11 +3,13 @@ package com.ls.Vbuynet.commons.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ls.Vbuynet.commons.service.GeneralService;
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.MyMapper;
+import tk.mybatis.mapper.entity.Example;
 
+import java.lang.reflect.ParameterizedType;
 import java.util.Date;
 
 /**
@@ -18,47 +20,72 @@ import java.util.Date;
  * date 2019/7/1 15:26
  */
 
-public class GeneralServiceImpl<T extends BaseDomain,D extends MyMapper<T>> implements GeneralService<T> {
+/**
+ * 通用的业务实现
+ * @param <T>
+ */
+public class GeneralServiceImpl<T extends AbstractBaseDomain,M extends MyMapper<T>> implements GeneralService<T> {
+
     @Autowired
-    private D dao;
+    protected  M mapper;
+    //可以得到泛型得类型
+    private Class<T> entityClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 
+    /**
+     * 查询属性值是否存在
+     * @param property
+     * @param value
+     * @return
+     */
     @Override
-    @Transactional(readOnly = false)
-    public int insert(T t) {
-        t.setCreated(new Date());
-        t.setUpdated(new Date());
-        return dao.insert(t);
+    public Boolean unique(String property, String value) {
+        Example example=new Example(entityClass);
+        example.createCriteria().andEqualTo(property,value);
+        int result=mapper.selectCountByExample(example);
+        if(result>0){
+            //说明存在
+            return  false;
+        }
+        //不存在
+        return true;
     }
 
     @Override
-    @Transactional(readOnly = false)
-    public int delete(T t) {
-        return dao.delete(t);
+    public T save(T domain) {
+        int result = 0;
+        Date currentDate = new Date();
+
+        // 创建
+        if (domain.getId() == null) {
+
+            /**
+             * 用于自动回显 ID，领域模型中需要 @ID 注解的支持
+             * {@link AbstractBaseDomain}
+             */
+            result = mapper.insertUseGeneratedKeys(domain);
+        }
+
+        // 更新
+        else {
+            result = mapper.updateByPrimaryKey(domain);
+        }
+
+        // 保存数据成功
+        if (result > 0) {
+            return domain;
+        }
+
+        // 保存数据失败
+        return null;
     }
 
-    @Override
-    @Transactional(readOnly = false)
-    public int update(T t) {
-        t.setUpdated(new Date());
-        return dao.updateByPrimaryKey(t);
-    }
 
     @Override
-    public int count(T t) {
-        return dao.selectCount(t);
-    }
-
-    @Override
-    public T selectOne(T t) {
-        return dao.selectOne(t);
-    }
-
-    @Override
-    public PageInfo<T> page(int pageNum, int pageSize, T t) {
-        PageHelper pageHelper = new PageHelper();
-        pageHelper.startPage(pageNum, pageSize);
-
-        PageInfo<T> pageInfo = new PageInfo<>(dao.select(t));
-        return pageInfo;
+    public PageInfo<T> page(int pageNum, int pageSize, T domain) {
+        Example example =new Example(entityClass);
+        example.createCriteria().andEqualTo(domain);//条件
+        PageHelper.startPage(pageNum,pageSize);
+        PageInfo<T> pageInfo=new PageInfo<>(mapper.selectByExample(example));
+        return  pageInfo;
     }
 }

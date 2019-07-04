@@ -1,16 +1,12 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Table(name = "product_color")
-public class ProductColor  extends BaseDomain implements Serializable {
-    /**
-     * 颜色Id
-     */
-
+public class ProductColor extends AbstractBaseDomain {
     /**
      * 比如: 黑色 白色 绿色
      */

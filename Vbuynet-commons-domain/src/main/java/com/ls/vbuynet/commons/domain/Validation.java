@@ -1,15 +1,12 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Table(name = "validation")
-public class Validation  extends BaseDomain implements Serializable {
-    /**
-     * QQ客服Id
-     */
+public class Validation  extends AbstractBaseDomain {
 
     /**
      * qq客服账号

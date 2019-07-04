@@ -1,14 +1,14 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Table(name = "order")
-public class Order  extends BaseDomain implements Serializable {
+public class Order extends AbstractBaseDomain {
     /**
      * 订单Id
      */

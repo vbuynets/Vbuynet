@@ -24,4 +24,8 @@
     <result column="integral" jdbcType="INTEGER" property="integral" />
     <result column="product_describe" jdbcType="VARCHAR" property="productDescribe" />
   </resultMap>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+
+  </select>
 </mapper>

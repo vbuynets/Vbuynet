@@ -17,9 +17,9 @@ import java.util.Map;
  * <p>Title: MapperUtils</p>
  * <p>Description: </p>
  *
- * @author Lusifer
+ * @author liang
  * @version 1.0.0
- * @date 2018/3/4 21:50
+ * @date 2019/7/01 15:50
  */
 public class MapperUtils {
     private final static ObjectMapper objectMapper = new ObjectMapper();

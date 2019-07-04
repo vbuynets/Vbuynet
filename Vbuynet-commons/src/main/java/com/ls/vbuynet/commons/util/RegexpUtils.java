@@ -5,9 +5,9 @@ package com.ls.vbuynet.commons.util;
  * <p>Title: RegexpUtils</p>
  * <p>Description: </p>
  *
- * @author Lusifer
+ * @author liang
  * @version 1.0.0
- * @date 2018/6/16 23:48
+ * @date 2019/7/01 15:50
  */
 public class RegexpUtils {
     /**

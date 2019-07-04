@@ -10,9 +10,9 @@ import java.io.Serializable;
  * <p>Title: AbstractBaseResult</p>
  * <p>Description: </p>
  *
- * @author Lusifer
+ * @author liang
  * @version 1.0.0
- * @date 2019/1/23 15:10
+ * @date 2019/7/01 15:50
  */
 @Data
 public abstract class AbstractBaseResult implements Serializable {

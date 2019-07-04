@@ -1,17 +1,12 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "cart")
-public class Cart  extends BaseDomain implements Serializable {
-    /**
-     * 购物车Id
-     */
-
+public class Cart  extends AbstractBaseDomain {
 
     /**
      * 商品Id

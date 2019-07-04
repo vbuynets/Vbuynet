@@ -1,16 +1,13 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Table(name = "product_discount")
-public class ProductDiscount  extends BaseDomain implements Serializable {
-    /**
-     * 折扣Id
-     */
+public class ProductDiscount  extends AbstractBaseDomain {
 
     /**
      * 折扣点数

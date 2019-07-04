@@ -1,15 +1,11 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Table(name = "site")
-public class Site  extends BaseDomain implements Serializable {
-    /**
-     * 地址Id
-     */
+public class Site  extends AbstractBaseDomain {
 
     /**
      * 用户Id

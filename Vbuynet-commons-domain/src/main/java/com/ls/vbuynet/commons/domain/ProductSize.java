@@ -1,18 +1,13 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
+
 import javax.persistence.Table;
 import java.io.Serializable;
 
 @Table(name = "product_size")
-public class ProductSize  extends BaseDomain implements Serializable {
-    /**
-     * 尺寸Id,不同商品size显示的值不同
-     */
+public class ProductSize extends AbstractBaseDomain {
 
 
     /**

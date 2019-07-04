@@ -1,15 +1,12 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Table(name = "product_pdf")
-public class ProductPdf  extends BaseDomain implements Serializable {
-    /**
-     * 专区Id
-     */
+public class ProductPdf extends AbstractBaseDomain {
 
 
     /**

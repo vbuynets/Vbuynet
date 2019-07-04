@@ -9,4 +9,10 @@
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="desc" jdbcType="VARCHAR" property="desc" />
   </resultMap>
+    <select id="selectAll" resultMap="BaseResultMap">
+      SELECT * FROM notice
+    </select>
+  <select id="selectId" resultMap="BaseResultMap" parameterType="int">
+      SELECT * FROM notice  WHERE Id=#{id}
+  </select>
 </mapper>

@@ -1,6 +1,7 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -8,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Table(name = "discounts")
-public class Discounts  extends BaseDomain implements Serializable {
+public class Discounts  extends AbstractBaseDomain {
 
     @Column(name = "smileMoney")
     private Integer smilemoney;

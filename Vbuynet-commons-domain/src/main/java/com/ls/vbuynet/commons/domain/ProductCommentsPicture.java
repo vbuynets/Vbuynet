@@ -1,16 +1,12 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Table(name = "product_comments_picture")
-public class ProductCommentsPicture  extends BaseDomain implements Serializable {
-    /**
-     * 评论图片Id
-     */
-
+public class ProductCommentsPicture  extends AbstractBaseDomain {
 
     /**
      * 图片理解

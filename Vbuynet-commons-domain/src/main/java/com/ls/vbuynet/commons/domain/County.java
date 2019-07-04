@@ -1,17 +1,13 @@
 package com.ls.vbuynet.commons.domain;
 
-import com.ls.vbuynet.commons.domain.domain.BaseDomain;
+
+import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Table(name = "county")
-public class County  extends BaseDomain implements Serializable {
-    /**
-     * 区县Id
-     */
-
-
+public class County  extends AbstractBaseDomain {
     /**
      * 当前省，市，县名称
      */
