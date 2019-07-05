@@ -5,7 +5,6 @@ import com.github.pagehelper.PageInfo;
 import com.ls.Vbuynet.commons.service.GeneralService;
 import com.ls.vbuynet.commons.dto.AbstractBaseDomain;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.MyMapper;
 import tk.mybatis.mapper.entity.Example;
 

@@ -36,11 +36,6 @@
         </dependency>
         <dependency>
             <groupId>com.ls</groupId>
-            <artifactId>Vbuynet-commons-mapper</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.ls</groupId>
             <artifactId>Vbuynet-commons-service</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
@@ -61,7 +56,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass></mainClass>
+                    <mainClass>com.ls.vbuynet.service.provider.qq.VbuynetServiceProviderQQApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

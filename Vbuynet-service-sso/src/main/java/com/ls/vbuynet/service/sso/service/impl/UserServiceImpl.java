@@ -11,6 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -21,6 +24,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private RedisService redisService;
+
+    @Autowired
+    private HttpSession session;
 
     @Override
     public User selectALL(String username, String password) {
@@ -34,6 +40,7 @@ public class UserServiceImpl implements UserService {
             user = userMapper.selectOneByExample(example);
             if (user != null && user.getPassword().equals(password)) {
                 try {
+                    session.setAttribute("user",user.getId());
                     redisService.put("username", username, (long) (60*60*24));
                 } catch (Exception e) {
                     e.printStackTrace();
